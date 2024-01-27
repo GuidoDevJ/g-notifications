@@ -14,7 +14,7 @@ export class EmailNodeMailerService {
     try {
       const info = await this.nodemailerService.sendMail({
         from: email, // sender address
-        to: 'guidogauna9@gmail.com', // list of receivers
+        to: email, // list of receivers
         subject: name, // Subject line
         text: `${message}`, // plain text body
         html: `<b>${message}</b>`, // html body
