@@ -18,7 +18,7 @@ export class EmailService {
         to: 'guidogauna9@gmail.com', // list of receivers
         subject: name, // Subject line
         text: `${message}`, // plain text body
-        html: '<b>Hello world?</b>', // html body
+        html: `<b>${message}</b>`, // html body
       });
       return info;
     } catch (error) {
