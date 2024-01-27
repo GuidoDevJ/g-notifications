@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import { Module } from '@nestjs/common';
-import { EmailService } from './email.service';
+import { EmailNodeMailerService } from './email.service';
 import { MailerModule } from '@nestjs-modules/mailer';
 import { ConfigModule } from 'src/common/config.module';
 
@@ -21,7 +21,7 @@ import { ConfigModule } from 'src/common/config.module';
     ConfigModule,
   ],
   controllers: [],
-  providers: [EmailService],
-  exports: [EmailService],
+  providers: [EmailNodeMailerService],
+  exports: [EmailNodeMailerService],
 })
 export class EmailModule {}

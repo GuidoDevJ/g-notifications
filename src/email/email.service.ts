@@ -7,10 +7,9 @@ type EmailMessage = {
   name: string;
 };
 @Injectable()
-export class EmailService {
+export class EmailNodeMailerService {
   constructor(private readonly nodemailerService: MailerService) {}
   async sendEmail(createMessage: EmailMessage) {
-    console.log('LLegue al Email Send Email');
     const { email, message, name } = createMessage;
     try {
       const info = await this.nodemailerService.sendMail({
