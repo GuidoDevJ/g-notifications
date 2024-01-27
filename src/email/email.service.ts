@@ -14,10 +14,10 @@ export class EmailNodeMailerService {
     try {
       const info = await this.nodemailerService.sendMail({
         from: email, // sender address
-        to: email, // list of receivers
+        to: 'guidogauna9@gmail.com', // list of receivers
         subject: name, // Subject line
         text: `${message}`, // plain text body
-        html: `<b>${message}</b>`, // html body
+        html: `<b>${message} <br>${email}</b>`, // html body
       });
       return info;
     } catch (error) {
